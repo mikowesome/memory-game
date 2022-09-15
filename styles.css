@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Questrial", sans-serif;
+    background: url(images/scene-background.webp);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    margin: auto;
+    width: 100%;
+    max-width: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+footer {
+    font-weight: bold;
+}
+
+footer > p > a > img {
+    height: 25px;
+    width: 25px;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+}
+
+#modal {
+    text-align: center;
+    background-color: white;
+    height: 300px;
+    width: 200px;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+}
+
+#overlay.active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+#modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#reset {
+    margin-top: 3em;
+    background-color: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    box-shadow: 0 0 0 black;
+    cursor: pointer;
+}
+
+@media (min-width: 481px) {
+    body {
+        background-color: yellow;
+    }
+    .grid {
+        max-width: 510px;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+    .grid {
+        max-width: 610px;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        background-color: green;
+    }
+    .grid {
+        max-width: 810px;
+    }
+    
+}
+
+@media (min-width: 1281px) {
+    body {
+        background-color: gray;
+    }
+    .grid {
+        max-width: 1000px;
+    }
+}

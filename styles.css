@@ -21,8 +21,8 @@ body {
 }
 
 img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
 }
 
@@ -82,10 +82,14 @@ footer > p > a > img {
     cursor: pointer;
 }
 
-@media (min-width: 481px) {
-    body {
-        background-color: yellow;
+@media (max-width: 480px) {
+    img {
+        width: 80px;
+        height: 80px;
     }
+}
+
+@media (min-width: 481px) {
     .grid {
         max-width: 510px;
     }
@@ -93,18 +97,12 @@ footer > p > a > img {
 }
 
 @media (min-width: 768px) {
-    body {
-        background-color: blue;
-    }
     .grid {
         max-width: 610px;
     }
 }
 
 @media (min-width: 1025px) {
-    body {
-        background-color: green;
-    }
     .grid {
         max-width: 810px;
     }
@@ -112,9 +110,6 @@ footer > p > a > img {
 }
 
 @media (min-width: 1281px) {
-    body {
-        background-color: gray;
-    }
     .grid {
         max-width: 1000px;
     }

@@ -97,12 +97,13 @@ const checkForMatch = () => {
 }
 
 const flipCard = (event) => {
+    if (chosenPokemon.length >= 2) return
     const pokemonID = event.target.getAttribute('data-id')
     chosenPokemonID.push(pokemonID)
     chosenPokemon.push(pokemons[pokemonID].name)
     event.target.setAttribute('src', pokemons[pokemonID].img)
     if (chosenPokemon.length === 2) {
-        setTimeout(checkForMatch, 200)
+        setTimeout(checkForMatch, 500)
     }
 }
 
